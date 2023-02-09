@@ -1,14 +1,29 @@
-on: [push]
+name: build
+
+on:
+  pull_request:
+  push:
 
 jobs:
-  gitavscan:
+  build:
     runs-on: ubuntu-latest
-    name: History AV Scan
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: '0'
-    - name: Git AV Scan
-      uses: djdefi/gitavscan@main
-      with:
-        full: '--full'
+      -
+        name: Checkout
+        uses: actions/checkout@v3
+      -
+        name: Set up Go
+        uses: actions/setup-go@v3
+      -
+        name: Build
+        run: |
+          GOOS=windows GOARCH=386 go build -o ./ghaction-virustotal-win32.exe -v -ldflags "-s -w"
+          GOOS=windows GOARCH=amd64 go build -o ./ghaction-virustotal-win64.exe -v -ldflags "-s -w"
+      -
+        name: VirusTotal Scan
+        uses: crazy-max/ghaction-virustotal@v3
+        with:
+          vt_api_key: ${{ secrets.VT_API_KEY }}
+          files: |
+            ./ghaction-virustotal-win32.exe
+            ./ghaction-virustotal-win64.exe
