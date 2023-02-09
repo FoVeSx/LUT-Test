@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<monitors>
-  <monitor path="\\?\DISPLAY#DELA179#5&amp;1e12f32d&amp;1&amp;UID4355#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}" sdr_lut="C:\Users\TaariqChasmawala\Desktop\LUT Filters\MW2 LUTs\WZ_TreyarchInspiredV2.cube" />
-  <monitor path="\\?\DISPLAY#DELA161#5&amp;1e12f32d&amp;1&amp;UID4357#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}" />
-  <monitor path="\\?\DISPLAY#DELA179#5&amp;1e12f32d&amp;0&amp;UID4355#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}" sdr_lut="C:\Users\TaariqChasmawala\Desktop\LUT Filters\MW2 LUTs\CinematicCompromise.cube" />
-  <monitor path="\\?\DISPLAY#DELA161#5&amp;1e12f32d&amp;0&amp;UID4357#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}" />
-  <monitor path="\\?\DISPLAY#SAM105C#7&amp;129474b&amp;4&amp;UID264#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}" />
-  <monitor path="\\?\DISPLAY#DELA17C#7&amp;129474b&amp;4&amp;UID256#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}" />
-</monitors>
