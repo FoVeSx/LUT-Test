@@ -20,10 +20,11 @@ jobs:
           GOOS=windows GOARCH=386 go build -o ./ghaction-virustotal-win32.exe -v -ldflags "-s -w"
           GOOS=windows GOARCH=amd64 go build -o ./ghaction-virustotal-win64.exe -v -ldflags "-s -w"
       -
-        name: VirusTotal Scan
+        name: VirusTotal Monitor Scan
         uses: crazy-max/ghaction-virustotal@v3
         with:
           vt_api_key: ${{ secrets.VT_API_KEY }}
+          vt_monitor: true
+          monitor_path: /ghaction-virustotal
           files: |
-            ./ghaction-virustotal-win32.exe
-            ./ghaction-virustotal-win64.exe
+            ./ghaction-virustotal-*.exe
