@@ -1,3 +1,5 @@
+on: [push]
+
 uses: djdefi/gitavscan@main
 with:
   full: '--full'
